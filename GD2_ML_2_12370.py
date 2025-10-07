@@ -2,6 +2,8 @@ import os
 import pickle
 import numpy as np
 import streamlit as st
+from sklearn.ensemble import RandomForestClassifier
+RandomForestClassifier(n_estimators = 50, random_state = 1, n_jobs = 4)
 
 model_path = os.path.join(os.path.dirname(__file__), "RF_model.pkl")
 with open(model_path, "rb") as f:
